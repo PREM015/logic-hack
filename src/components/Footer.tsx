@@ -71,31 +71,31 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-20 md:mt-24 mb-20 md:mb-24 px-10 py-14 md:px-16 md:py-16 lg:px-20 lg:py-20 rounded-3xl bg-linear-to-r from-orange-500/10 via-yellow-500/10 to-green-500/10 border border-orange-500/20 backdrop-blur-sm"
+          className="mt-12 md:mt-16 mb-12 md:mb-16 px-8 py-10 md:px-12 md:py-12 lg:px-16 lg:py-14 rounded-3xl bg-linear-to-r from-orange-500/10 via-yellow-500/10 to-green-500/10 border border-orange-500/20 backdrop-blur-sm"
         >
           <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
             <div className="text-center lg:text-left flex-1 space-y-5">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-white leading-tight">
                 Ready to{" "}
                 <span className="bg-linear-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent">
                   Loot the Logic
                 </span>
                 ? 🏆
               </h3>
-              <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
+              <p className="text-gray-400 text-base md:text-lg leading-relaxed">
                 Register now and compete with the best coders across the nation!
               </p>
             </div>
             <Link to="/register" className="shrink-0">
               <motion.button
-                className="px-12 py-6 bg-linear-to-r from-orange-500 to-yellow-500 rounded-full font-black text-white text-xl tracking-wider shadow-xl shadow-orange-500/30 hover:shadow-orange-500/60 transition-shadow whitespace-nowrap flex items-center gap-4"
+                className="px-8 py-4 bg-linear-to-r from-orange-500 to-yellow-500 rounded-full font-black text-white text-lg tracking-wider shadow-xl shadow-orange-500/30 hover:shadow-orange-500/60 transition-shadow whitespace-nowrap flex items-center gap-4"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 0 40px rgba(249,115,22,0.5)",
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                REGISTER NOW <ExternalLink className="w-6 h-6" />
+                REGISTER NOW <ExternalLink className="w-5 h-5" />
               </motion.button>
             </Link>
           </div>
@@ -105,7 +105,7 @@ const Footer = () => {
       {/* ══════════════════════════════════════
           MAIN FOOTER — Evenly Spread Grid
       ══════════════════════════════════════ */}
-      <div className="relative w-full max-w-350 mx-auto px-6 sm:px-10 lg:px-16 xl:px-20 pt-8 pb-24">
+      <div className="relative w-full max-w-350 mx-auto px-6 sm:px-10 lg:px-16 xl:px-20 pt-16 pb-24">
         <div className="flex flex-col lg:flex-row justify-between gap-16 lg:gap-0">
           {/* ═══ Column 1: Brand (Left) ═══ */}
           <motion.div
@@ -142,56 +142,8 @@ const Footer = () => {
               problem-solving, logic, and innovation. Join the ultimate coding
               utsav! 🪔✨
             </p>
-
-            <div className="flex gap-5">
-              {socialLinks.map((social) => (
-                <motion.a
-                  key={social.label}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  className="w-14 h-14 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-2xl hover:bg-orange-500/20 hover:border-orange-500/30 transition-all duration-300"
-                  whileHover={{ scale: 1.15, y: -5 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  {social.icon}
-                </motion.a>
-              ))}
-            </div>
           </motion.div>
-
-          {/* ═══ Column 2: Quick Links (Center-Left) ═══ */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex-1 space-y-10 lg:px-12 lg:border-r lg:border-white/5"
-          >
-            <h3 className="font-bold text-white text-2xl flex items-center gap-4">
-              <span className="w-12 h-1 bg-linear-to-r from-orange-500 to-yellow-500 rounded-full" />
-              Quick Links
-            </h3>
-
-            <ul className="space-y-6">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    to={link.path}
-                    className="group text-gray-400 hover:text-orange-400 transition-all duration-300 text-lg flex items-center gap-5"
-                  >
-                    <span className="w-2.5 h-2.5 rounded-full bg-orange-500/40 group-hover:bg-orange-500 group-hover:shadow-lg group-hover:shadow-orange-500/50 transition-all duration-300 shrink-0" />
-                    <span className="group-hover:translate-x-2 transition-transform duration-300">
-                      {link.label}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* ═══ Column 3: Event Details (Center-Right) ═══ */}
+          {/* ═══ Column 2: Event Details (Center-Right) ═══ */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -303,17 +255,6 @@ const Footer = () => {
                 </div>
               </motion.div>
             </a>
-
-            {/* India Badge */}
-            <div className="flex items-center gap-6 px-8 py-7 rounded-2xl bg-white/3 border border-white/5">
-              <span className="text-5xl shrink-0">🇮🇳</span>
-              <div className="space-y-2">
-                <p className="text-white text-lg font-semibold">
-                  Proudly Indian
-                </p>
-                <p className="text-gray-500 text-base">Made in Bharat 🪔</p>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>
