@@ -3,23 +3,23 @@ import { Link } from "react-router-dom";
 import { Code, Heart, ExternalLink, ArrowUp, Sparkles } from "lucide-react";
 
 const Footer = () => {
-  const socialLinks = [
-    { icon: "📸", label: "Instagram", url: "#" },
-    { icon: "💼", label: "LinkedIn", url: "#" },
-    { icon: "🐦", label: "Twitter", url: "#" },
-    { icon: "📧", label: "Email", url: "mailto:admin@fossptu.dev" },
-  ];
+  // const socialLinks = [
+  //   { icon: "📸", label: "Instagram", url: "#" },
+  //   { icon: "💼", label: "LinkedIn", url: "#" },
+  //   { icon: "🐦", label: "Twitter", url: "#" },
+  //   { icon: "📧", label: "Email", url: "mailto:admin@fossptu.dev" },
+  // ];
 
-  const quickLinks = [
-    { label: "Home", path: "/" },
-    { label: "About", path: "/about" },
-    { label: "Rules", path: "/rules" },
-    { label: "Timeline", path: "/timeline" },
-    { label: "Register", path: "/register" },
-    { label: "QR Hunt", path: "/qr-hunt" },
-    { label: "Fun Zone", path: "/fun" },
-    { label: "Contact", path: "/contact" },
-  ];
+  // const quickLinks = [
+  //   { label: "Home", path: "/" },
+  //   { label: "About", path: "/about" },
+  //   { label: "Rules", path: "/rules" },
+  //   { label: "Timeline", path: "/timeline" },
+  //   { label: "Register", path: "/register" },
+  //   { label: "QR Hunt", path: "/qr-hunt" },
+  //   { label: "Fun Zone", path: "/fun" },
+  //   { label: "Contact", path: "/contact" },
+  // ];
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
